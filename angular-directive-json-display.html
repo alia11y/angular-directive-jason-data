@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <meta charset="utf-8">
+        <title>Angular Directives for JSON data display based on the different field</title>
+        <meta name="Author" content="Irfan Ali-irfan@iali.me" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="description" content="Need to explicitly set the height of map canvas, or make all of it&#39;s containers 100%" />
+      
+       	<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.js"></script>
+		<script type='text/javascript' src="js/controller-directive.js"></script>
+		  
+        
+        
+          </head>
+    
+
+    
+    <body >
+        <style>
+		label {
+    display:block;
+}
+		</style>
+		
+		<div ng-app="myapp">
+		<ol ng-controller="ctrl">
+        <li data-ng-repeat="question in questions"> 
+          <div ng-switch on="question.responseType">
+            <div ng-switch-when="F" textquestion="question"></div>
+            <div ng-switch-when="R" radioquestion="question"></div>
+            <div ng-switch-when="M" multiquestion="question"></div>
+            <div ng-switch-when="S" selectquestion="question"></div>
+          </div>
+        </li>
+    </ol>
+</div>
+        
+        
+	
+
+
+
+      
+     
+        
+        
+    </body>
+</html>
